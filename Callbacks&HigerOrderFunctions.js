@@ -74,3 +74,26 @@ function multiplyBy2(input) { return input * 2; }
 function divideBy2(input) { return input / 2; }
 const GeneralizedResult = copyArrayAndManipulate([1,2,3], multiplyBy2);
 const GeneralizedResult2 = copyArrayAndManipulate([1,2,3], divideBy2);
+
+// Arrow functions - a shorthand way to save functions
+function multiplyby2(input) { return input * 2; }
+//         ||
+let multiplyby2 = (input) => { return input * 2 }
+//         ||
+let multiplyby2 = (input) => input * 2
+//         ||
+let multiplyby2 = input => input * 2
+
+const output = multiplyby2(3); // 6
+
+// We can even pass multiplyby2 directly without a name
+function copyArrayAndManipulate(array, instructions) {
+  const output = [];
+  for (let i = 0; i < array.length; i++) {
+    output.push(instructions(array[i]));
+  }
+  return output;
+}
+
+// const multiplyby2 = input => input * 2 // arrow function
+const resultArrowShorhand = copyArrayAndManipulate([1,2,3], input => input*2); 
