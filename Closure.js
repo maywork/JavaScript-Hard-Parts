@@ -11,6 +11,7 @@ function createFunction() {
 }
 
 const generatedFunc = createFunction();
+// arguments do not make a function run, parentheses make functions run
 console.log(generatedFunc) // ƒ multiplyBy2()
 typeof generatedFunc // 'function'
 const result = generatedFunc(3)
