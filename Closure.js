@@ -16,3 +16,4 @@ console.log(generatedFunc) // ƒ multiplyBy2()
 typeof generatedFunc // 'function'
 const result = generatedFunc(3)
 console.log(result) // 6
+console.log(result) // 6
