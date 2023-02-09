@@ -16,4 +16,14 @@ console.log(generatedFunc) // ƒ multiplyBy2()
 typeof generatedFunc // 'function'
 const result = generatedFunc(3)
 console.log(result) // 6
-console.log(result) // 6
+
+
+// Nested Function Scope
+// calling a function in the same function call as it was defined
+
+function outer() {
+  let counter = 0;
+  function incrementCounter() { counter++; }
+  incrementCounter();
+}
+outer(); // where you define the function determines what data it has access to when it is called/invoked
