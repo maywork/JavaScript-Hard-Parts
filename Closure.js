@@ -19,7 +19,7 @@ console.log(result) // 6
 
 
 // Nested Function Scope
-// calling a function in the same function call as it was defined
+// Calling a function in the same function call as it was defined
 
 function outer() {
   let counter = 0;
@@ -27,3 +27,14 @@ function outer() {
   incrementCounter();
 }
 outer(); // where you define the function determines what data it has access to when it is called/invoked
+
+// Calling a function outside of the function call in which it was defined
+function outer() {
+  let counter = 0;
+  function incrementCounter() { counter++;}
+  return incrementCounter;
+}
+
+const myFunction = outer();
+myFunction();
+myFunction();
