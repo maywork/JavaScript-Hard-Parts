@@ -36,5 +36,6 @@ function outer() {
 }
 
 const myFunction = outer();
+myFunction(); 
 myFunction();
-myFunction();
+// however we cannot access the 'counter' data directly from this function unless we create a local variable in the function definition of 'myNewFunction' so it is also private data
